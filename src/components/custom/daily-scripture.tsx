@@ -57,6 +57,8 @@ const DailyScripture = () => {
   const [dailyScripture, setDailyScripture] = useState<Scripture | null>(null);
 
   useEffect(() => {
+    // This effect runs on the client side after the component mounts.
+    // It determines the scripture for the current day.
     const getDayOfYear = () => {
       const now = new Date();
       const start = new Date(now.getFullYear(), 0, 0);
@@ -68,37 +70,37 @@ const DailyScripture = () => {
     const dayOfYear = getDayOfYear();
     const scriptureIndex = dayOfYear % scriptures.length;
     setDailyScripture(scriptures[scriptureIndex]);
-  }, []);
+  }, []); // Empty dependency array means this runs once on mount
 
   if (!dailyScripture) {
     return (
-      <Card className="w-full max-w-2xl mx-auto my-8 shadow-lg">
+      <Card className="w-full max-w-lg mx-auto my-6 shadow-md">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-xl text-primary">
-            <BookOpenText className="h-6 w-6" />
+          <CardTitle className="flex items-center gap-2 text-lg text-primary">
+            <BookOpenText className="h-5 w-5" />
             Today's Scripture
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground">Loading scripture...</p>
+        <CardContent className="p-4">
+          <p className="text-muted-foreground text-sm">Loading scripture...</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <Card className="w-full max-w-2xl mx-auto my-8 shadow-lg border-accent">
-      <CardHeader className="bg-primary rounded-t-lg">
-        <CardTitle className="flex items-center gap-3 text-2xl font-semibold text-primary-foreground">
-          <BookOpenText className="h-7 w-7" />
+    <Card className="w-full max-w-lg mx-auto my-6 shadow-lg border-accent">
+      <CardHeader className="bg-primary rounded-t-lg p-4">
+        <CardTitle className="flex items-center gap-2 text-xl font-semibold text-primary-foreground">
+          <BookOpenText className="h-6 w-6" />
           Today's Scripture
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-6 text-center">
-        <blockquote className="text-lg md:text-xl font-serif text-foreground mb-4 leading-relaxed">
+      <CardContent className="p-4 text-center">
+        <blockquote className="text-base md:text-lg font-serif text-foreground mb-3 leading-relaxed">
           "{dailyScripture.verse}"
         </blockquote>
-        <p className="text-md text-accent font-semibold">{dailyScripture.reference}</p>
+        <p className="text-sm text-accent font-semibold">{dailyScripture.reference}</p>
       </CardContent>
     </Card>
   );
