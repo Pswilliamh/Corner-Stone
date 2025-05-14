@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Home, Layers, BookMarked } from 'lucide-react'; // Added BookMarked for Scripture Search
+import { Home, Layers, BookMarked } from 'lucide-react'; // BookMarked is used for Bible Bot
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -14,7 +14,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'Identify', icon: Home },
     { href: '/collection', label: 'Collection', icon: Layers },
-    { href: '/scripture-search', label: 'Scripture Search', icon: BookMarked }, // New navigation item
+    { href: '/scripture-search', label: 'Bible Bot', icon: BookMarked }, // Changed label
   ];
 
   const logoUrl = "https://cdn.discordapp.com/attachments/1260653960283099156/1267975099760836749/image.png?ex=66ab4035&is=66a9eeb5&hm=18d5959b35f4e86afbca9061ac7961b266985a0c9c649657849f4126cb70c057&";

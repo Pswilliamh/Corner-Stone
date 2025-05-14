@@ -11,10 +11,10 @@ export default function ScriptureSearchPage() {
         <CardHeader>
           <CardTitle className="flex items-center gap-3 text-2xl font-semibold text-primary">
             <BookMarked className="h-7 w-7 text-accent" />
-            Explore the Scriptures
+            Corner Stone Bible Bot
           </CardTitle>
           <CardDescription className="text-md text-muted-foreground">
-            Have questions about stones, elements, or other topics in the Bible? Use the Bible Bot below to search and explore.
+            Have questions about stones, elements, or other topics in the Bible? Use the Bible Bot below to search and explore historical biblical truth and bring spirituality to your experience of geology.
           </CardDescription>
         </CardHeader>
         <CardContent>
