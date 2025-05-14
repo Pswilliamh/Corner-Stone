@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -11,6 +12,7 @@ import type { SavedRock } from '@/lib/rock-hound-types';
 import { useToast } from "@/hooks/use-toast";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertTriangle, Loader2 } from "lucide-react";
+import DailyScripture from '@/components/custom/daily-scripture'; // Added import
 
 export default function HomePage() {
   const [uploadedImage, setUploadedImage] = useState<{ file: File; dataUri: string } | null>(null);
@@ -68,12 +70,14 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12 flex flex-col items-center">
-      {!rockData && (
+      <DailyScripture /> {/* Added DailyScripture component */}
+
+      {!rockData && !isLoading && !uploadedImage &&  ( // Condition to hide uploader if rockData exists or is loading
         <PhotoUploader onPhotoUploaded={handlePhotoUploaded} isProcessing={isLoading} />
       )}
 
       {isLoading && (
-        <div className="flex flex-col items-center justify-center space-y-4 p-8 rounded-lg bg-card shadow-md">
+        <div className="flex flex-col items-center justify-center space-y-4 p-8 rounded-lg bg-card shadow-md min-h-[300px]">
           <Loader2 className="h-12 w-12 animate-spin text-primary" />
           <p className="text-lg text-muted-foreground">Identifying your rock, please wait...</p>
           <p className="text-sm text-muted-foreground">This may take a moment.</p>
