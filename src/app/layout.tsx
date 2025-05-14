@@ -38,7 +38,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Corner Stone" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        {/* <meta name="msapplication-config" content="/browserconfig.xml" /> Removed for now */}
+        {/* <meta name="msapplication-config" content="/browserconfig.xml" /> Removed as per previous step */}
         <meta name="msapplication-TileColor" content={themeColor} />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content={themeColor} />
@@ -54,7 +54,7 @@ export default function RootLayout({
         {/* <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" /> */}
         {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning={true}>
         <AppLayout>
           {children}
         </AppLayout>
