@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Gem, Home, Layers } from 'lucide-react'; // Using Layers for collection
+import Image from 'next/image';
+import { Home, Layers } from 'lucide-react'; // Using Layers for collection
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -14,12 +15,22 @@ const Header = () => {
     { href: '/collection', label: 'Collection', icon: Layers },
   ];
 
+  const logoUrl = "https://cdn.discordapp.com/attachments/1260653960283099156/1267975099760836749/image.png?ex=66ab4035&is=66a9eeb5&hm=18d5959b35f4e86afbca9061ac7961b266985a0c9c649657849f4126cb70c057&";
+
+
   return (
     <header className="bg-card border-b border-border shadow-sm sticky top-0 z-40">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl font-semibold text-primary hover:text-primary/80 transition-colors">
-          <Gem className="h-7 w-7 text-accent" />
-          <span>Rock Hound</span>
+          <Image 
+            src={logoUrl}
+            alt="Corner Stone Logo" 
+            width={40} 
+            height={40} 
+            className="rounded-full"
+            data-ai-hint="church logo"
+          />
+          <span>Corner Stone</span>
         </Link>
         <nav className="flex items-center gap-2 sm:gap-4">
           {navItems.map((item) => (

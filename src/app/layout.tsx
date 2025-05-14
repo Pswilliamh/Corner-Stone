@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Rock Hound',
-  description: 'Identify and collect rocks with AI',
+  title: 'Corner Stone',
+  description: 'Kingdom Of Heaven Embassy Inc. - Corner Stone',
 };
 
 export default function RootLayout({

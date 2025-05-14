@@ -13,7 +13,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
         {children}
       </main>
       <footer className="bg-card border-t border-border py-4 text-center text-sm text-muted-foreground">
-        <p>&copy; {new Date().getFullYear()} Rock Hound. Discover the world beneath your feet.</p>
+        <p>&copy; {new Date().getFullYear()} Kingdom Of Heaven Embassy Inc. All rights reserved.</p>
       </footer>
     </div>
   );
