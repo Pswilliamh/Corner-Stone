@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   const themeColor = "#2A4B7C"; // Dark Navy from globals.css primary
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         {/* Standard PWA meta tags */}
         <meta name="application-name" content="Corner Stone" />
@@ -49,6 +49,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIconUrl} />
         <link rel="apple-touch-icon" sizes="167x167" href={appleTouchIconUrl} />
         
+        {/* Manifest link for PWA */}
+        <link rel="manifest" href="/manifest.json" />
+
         {/* Favicon links (optional, but good practice) - you'd need to create these icons */}
         {/* <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" /> */}
         {/* <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" /> */}
