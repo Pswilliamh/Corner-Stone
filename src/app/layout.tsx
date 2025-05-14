@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Corner Stone',
   description: 'Kingdom Of Heaven Embassy Inc. - Corner Stone',
-  manifest: '/manifest.json', // Link to the manifest file
+  manifest: '/manifest.json',
 };
 
 const appleTouchIconUrl = "https://cdn.discordapp.com/attachments/1260653960283099156/1267975099760836749/image.png?ex=66ab4035&is=66a9eeb5&hm=18d5959b35f4e86afbca9061ac7961b266985a0c9c649657849f4126cb70c057&";
@@ -27,6 +27,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const themeColor = "#2A4B7C"; // Dark Navy from globals.css primary
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -37,10 +38,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Corner Stone" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-config" content="/browserconfig.xml" /> {/* You might want to create this file too */}
-        <meta name="msapplication-TileColor" content="#2A4B7C" />
+        {/* <meta name="msapplication-config" content="/browserconfig.xml" /> Removed for now */}
+        <meta name="msapplication-TileColor" content={themeColor} />
         <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="theme-color" content="#2A4B7C" />
+        <meta name="theme-color" content={themeColor} />
 
         {/* Apple Touch Icons */}
         <link rel="apple-touch-icon" href={appleTouchIconUrl} />
