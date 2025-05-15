@@ -17,13 +17,24 @@ export default function AlphabetPage() {
             Alphabet Lessons
           </CardTitle>
           <CardDescription>
-            Interactive lessons for each letter coming soon!
+            Interactive lessons for each letter coming soon! Click a letter to learn more.
           </CardDescription>
         </CardHeader>
-        <CardContent className="min-h-[300px] flex items-center justify-center">
-          <p className="text-xl text-muted-foreground">
-            Content for Alphabet learning will be here. Stay tuned!
+        <CardContent className="min-h-[300px] flex flex-col items-center justify-center p-6">
+          <p className="text-xl text-muted-foreground mb-6">
+            Placeholder: Interactive alphabet grid will be here.
           </p>
+          <div className="grid grid-cols-5 sm:grid-cols-7 md:grid-cols-9 gap-2 text-2xl">
+            {Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)).map((letter) => (
+              <button
+                key={letter}
+                className="p-3 bg-card border border-border rounded-lg shadow-sm hover:bg-accent hover:text-accent-foreground transition-colors focus:ring-2 focus:ring-primary"
+                onClick={() => alert(`You clicked the letter ${letter}!`)}
+              >
+                {letter}
+              </button>
+            ))}
+          </div>
         </CardContent>
       </Card>
     </div>
