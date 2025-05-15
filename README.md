@@ -1,16 +1,15 @@
 
-# English Leap for Students
+# Corner Stone App
 
-This is a Next.js application designed to help students, particularly in Indonesia, learn English. 
-The app focuses on teaching letters, words, sentences, and pronunciation with an interactive and engaging approach.
+This is a Next.js application designed to integrate geological exploration with spiritual insights. Users can identify rocks, describe items, explore their biblical significance, and manage a personal collection.
 
-## Features (Planned)
+## Features
 
--   **Alphabet Learning:** Interactive lessons for each letter.
--   **Vocabulary Builder:** Thematic word sets with images, audio, and translations.
--   **Sentence Construction:** Exercises to practice forming basic English sentences.
--   **Pronunciation Practice:** Audio playback for words and sentences, potentially with recording/feedback.
--   **Indonesian to English Support:** Translation aids and contextual learning.
+-   **Rock Identification:** Upload a photo of a rock to get AI-powered identification and details.
+-   **Describe Item:** Upload a photo of any item to get an AI-generated description and potential significance.
+-   **My Collection:** Save identified rocks and items with personal notes.
+-   **Bible Bot:** Explore scriptures and ask questions about biblical topics, especially related to stones and elements.
+-   **Daily Scripture:** View an inspirational Bible verse each day.
 
 ## Tech Stack
 
@@ -19,7 +18,8 @@ The app focuses on teaching letters, words, sentences, and pronunciation with an
 -   TypeScript
 -   Tailwind CSS
 -   ShadCN UI components
--   Genkit for potential AI features like advanced TTS or translation, if needed
+-   Genkit (for AI features - rock identification, item description)
+-   Firebase (potential for future database/auth integration)
 
 ## Getting Started
 
@@ -29,10 +29,15 @@ To get started with development:
     ```bash
     npm install
     ```
-2.  Run the development server:
+2.  Set up your environment variables. Create a `.env.local` file in the root of your project and add your Google AI API Key:
+    ```env
+    GOOGLE_API_KEY=YOUR_GOOGLE_AI_API_KEY
+    ```
+3.  Run the development server:
     ```bash
     npm run dev
     ```
     The app will be available at `http://localhost:9003` by default.
 
-This project is a fresh start. Ensure you have the necessary ShadCN UI components (like `Button`) installed if you plan to use them, or replace them with basic HTML elements initially. The current header uses a `Button` component that would typically come from ` '@/components/ui/button';`.
+Ensure you have the necessary ShadCN UI components installed.
+```

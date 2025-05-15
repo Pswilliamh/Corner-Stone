@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,66 +9,59 @@ body {
 
 @layer base {
   :root {
-    --background: 200 50% 96%; /* Very Light Sky Blue */
-    --foreground: 220 25% 25%; /* Dark Cool Gray */
+    /* Navy Blue, White, Gold Theme for Corner Stone */
+    --background: 220 30% 15%; /* Dark Navy Blue */
+    --foreground: 0 0% 98%; /* Almost White */
 
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 220 25% 25%; /* Dark Cool Gray */
+    --card: 220 30% 20%; /* Slightly Lighter Navy */
+    --card-foreground: 0 0% 98%; /* Almost White */
 
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 220 25% 25%; /* Dark Cool Gray */
+    --popover: 220 30% 12%; /* Darker Navy for Popovers */
+    --popover-foreground: 0 0% 98%; /* Almost White */
 
-    --primary: 205 70% 50%; /* Bright Sky Blue */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 45 80% 60%; /* Gold */
+    --primary-foreground: 220 30% 10%; /* Very Dark Navy for text on Gold */
 
-    --secondary: 160 60% 65%; /* Soft Teal */
-    --secondary-foreground: 220 25% 15%; /* Darker Cool Gray */
+    --secondary: 210 30% 35%; /* Muted Blue/Grey */
+    --secondary-foreground: 0 0% 98%; /* Almost White */
 
-    --muted: 210 30% 90%; /* Light Grayish Blue */
-    --muted-foreground: 210 20% 50%; /* Medium Grayish Blue */
+    --muted: 220 20% 30%; /* Medium Dark Cool Gray */
+    --muted-foreground: 210 30% 70%; /* Lighter Grayish Blue */
+    
+    --accent: 45 70% 50%; /* Slightly Darker Gold / Ochre */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --accent: 45 100% 55%; /* Sunny Yellow */
-    --accent-foreground: 220 25% 15%; /* Darker Cool Gray */
-
-    --destructive: 0 70% 55%; /* Soft Red */
+    --destructive: 0 60% 50%; /* Soft Red */
     --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 200 30% 85%; /* Light Blue Border */
-    --input: 200 30% 92%; /* Very Light Blue Input */
-    --ring: 205 70% 50%; /* Bright Sky Blue for focus rings */
+    --border: 220 20% 40%; /* Medium Cool Gray Border */
+    --input: 220 20% 25%; /* Darker Cool Gray Input */
+    --ring: 45 80% 60%; /* Gold for focus rings */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Define dark mode colors if needed later, for now matching light for simplicity */
-    --background: 220 25% 15%; /* Dark Cool Gray */
-    --foreground: 200 50% 96%; /* Very Light Sky Blue */
-
-    --card: 220 25% 20%; /* Slightly Lighter Dark Cool Gray */
-    --card-foreground: 200 50% 96%; /* Very Light Sky Blue */
-
-    --popover: 220 25% 15%; /* Dark Cool Gray */
-    --popover-foreground: 200 50% 96%; /* Very Light Sky Blue */
-
-    --primary: 45 100% 55%; /* Sunny Yellow (Primary for dark) */
-    --primary-foreground: 220 25% 10%; /* Very Dark Cool Gray */
-
-    --secondary: 160 50% 45%; /* Muted Teal */
-    --secondary-foreground: 200 50% 96%; /* Very Light Sky Blue */
-
-    --muted: 220 20% 30%; /* Medium Dark Cool Gray */
-    --muted-foreground: 210 30% 70%; /* Lighter Grayish Blue */
-
-    --accent: 205 70% 60%; /* Brighter Sky Blue (Accent for dark) */
-    --accent-foreground: 220 25% 10%; /* Very Dark Cool Gray */
-
+    /* Keeping dark theme consistent with the primary theme for now */
+    --background: 220 30% 15%;
+    --foreground: 0 0% 98%;
+    --card: 220 30% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 45 80% 60%;
+    --primary-foreground: 220 30% 10%;
+    --secondary: 210 30% 35%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 20% 30%;
+    --muted-foreground: 210 30% 70%;
+    --accent: 45 70% 50%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 220 20% 40%; /* Medium Cool Gray Border */
-    --input: 220 20% 25%; /* Darker Cool Gray Input */
-    --ring: 45 100% 55%; /* Sunny Yellow for focus rings */
+    --border: 220 20% 40%;
+    --input: 220 20% 25%;
+    --ring: 45 80% 60%;
   }
 }
 

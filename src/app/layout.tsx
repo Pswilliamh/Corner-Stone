@@ -5,7 +5,6 @@ import './globals.css';
 import AppLayout from '@/components/layout/app-layout';
 import { Toaster } from "@/components/ui/toaster";
 
-
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -17,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'English Leap for Students',
-  description: 'Learn English with fun and interactive lessons!',
-  manifest: '/manifest.json',
+  title: 'Corner Stone',
+  description: 'Identify rocks, describe items, and explore their biblical significance.',
+  manifest: '/manifest-cornerstone.json', // Using a distinct manifest
 };
 
-const themeColor = "#85D3FF"; // Light Sky Blue from new theme (example primary)
+const themeColor = "#D4AF37"; // Gold, approximating --primary
 
 export default function RootLayout({
   children,
@@ -32,19 +31,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <meta name="application-name" content="English Leap for Students" />
+        <meta name="application-name" content="Corner Stone" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="English Leap for Students" />
+        <meta name="apple-mobile-web-app-title" content="Corner Stone" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content={themeColor} />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content={themeColor} />
-        <link rel="manifest" href="/manifest.json" />
-        {/* Add actual icon links here if you have them */}
-        {/* <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" /> */}
-        {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
+        <link rel="manifest" href="/manifest-cornerstone.json" />
+        {/* 
+          Placeholder for actual icons. Create these in public/icons/cornerstone/
+          <link rel="apple-touch-icon" href="/icons/cornerstone/apple-touch-icon.png" /> 
+          <link rel="shortcut icon" href="/icons/cornerstone/favicon.ico" /> 
+        */}
       </head>
       <body 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
