@@ -97,8 +97,23 @@ export default function HomePage() {
       <Card className="w-full max-w-4xl mx-auto shadow-xl bg-card/70 border-primary/50">
         <CardHeader className="text-center">
           <Gem className="h-16 w-16 text-accent mx-auto mb-4 animate-pulse" />
-          <CardTitle className="text-4xl font-bold text-primary">Identify Your Rocks</CardTitle>
+          <CardTitle className="text-4xl font-bold text-primary">Welcome to Corner Stone</CardTitle>
           <CardDescription className="text-lg text-muted-foreground mt-2">
+            Identify rocks, explore biblical insights with our Bible Bot, and describe items with AI.
+            <br />
+            Start by identifying a rock below, or use the navigation above to explore other features.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="px-4 md:px-6 py-6">
+         {isMounted && <DailyScripture />}
+        </CardContent>
+      </Card>
+
+      <Card className="w-full max-w-4xl mx-auto shadow-xl bg-card/70 border-primary/50" id="identify-rock-section">
+        <CardHeader className="text-center">
+          <Gem className="h-12 w-12 text-accent mx-auto mb-2" />
+          <CardTitle className="text-3xl font-bold text-primary">Identify Your Rocks</CardTitle>
+          <CardDescription className="text-md text-muted-foreground mt-1">
             Upload a photo of a rock, and let our AI geologist help you discover its secrets.
           </CardDescription>
         </CardHeader>
@@ -139,9 +154,6 @@ export default function HomePage() {
           )}
         </CardContent>
       </Card>
-      
-      {isMounted && <DailyScripture />}
-
     </div>
   );
 }
