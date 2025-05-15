@@ -11,7 +11,7 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
-export const DescribeItemInputSchema = z.object({
+const DescribeItemInputSchema = z.object({
   photoDataUri: z
     .string()
     .describe(
@@ -21,7 +21,7 @@ export const DescribeItemInputSchema = z.object({
 });
 export type DescribeItemInput = z.infer<typeof DescribeItemInputSchema>;
 
-export const DescribeItemOutputSchema = z.object({
+const DescribeItemOutputSchema = z.object({
   itemName: z.string().describe("The identified name of the item."),
   description: z.string().describe("A general description of the item."),
   keyAspects: z.array(z.string()).describe("Key aspects or features of the item."),
