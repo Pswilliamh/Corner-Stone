@@ -1,6 +1,7 @@
-# English Leap for Kids
 
-This is a Next.js application designed to help children, particularly in Indonesia, learn English. 
+# English Leap for Students
+
+This is a Next.js application designed to help students, particularly in Indonesia, learn English. 
 The app focuses on teaching letters, words, sentences, and pronunciation with an interactive and engaging approach.
 
 ## Features (Planned)
@@ -17,8 +18,8 @@ The app focuses on teaching letters, words, sentences, and pronunciation with an
 -   React
 -   TypeScript
 -   Tailwind CSS
--   (ShadCN UI components will likely be added)
--   (Genkit for potential AI features like advanced TTS or translation, if needed)
+-   ShadCN UI components
+-   Genkit for potential AI features like advanced TTS or translation, if needed
 
 ## Getting Started
 

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -15,7 +16,7 @@ export default function HomePage() {
     <div className="space-y-12 flex flex-col items-center text-center">
       <div className="mt-8">
         <h1 className="text-4xl sm:text-5xl font-bold text-primary">
-          Welcome to English Leap for Kids!
+          Welcome to English Leap for Students!
         </h1>
         <p className="mt-4 text-lg sm:text-xl text-foreground/80 max-w-2xl mx-auto">
           Your fun and interactive journey to learning English starts here. Explore letters, words, sentences, and practice pronunciation with engaging lessons.
@@ -42,7 +43,7 @@ export default function HomePage() {
       <div className="mt-12 p-6 bg-secondary/20 rounded-lg max-w-3xl w-full shadow-md">
         <h3 className="text-2xl font-semibold text-secondary-foreground mb-3">Teacher's Note</h3>
         <p className="text-secondary-foreground/80">
-          This app is designed to make learning English intuitive and enjoyable for young learners in Indonesia. 
+          This app is designed to make learning English intuitive and enjoyable for young students in Indonesia. 
           We'll explore translation from Bahasa Indonesia to English and use audio to help with understanding and speaking.
           Let's embark on this exciting learning adventure together!
         </p>

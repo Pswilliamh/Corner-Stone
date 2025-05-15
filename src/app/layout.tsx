@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import AppLayout from '@/components/layout/app-layout';
+import { Toaster } from "@/components/ui/toaster";
+
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -14,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'English Leap for Kids',
+  title: 'English Leap for Students',
   description: 'Learn English with fun and interactive lessons!',
   manifest: '/manifest.json',
 };
@@ -29,10 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <meta name="application-name" content="English Leap for Kids" />
+        <meta name="application-name" content="English Leap for Students" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="English Leap for Kids" />
+        <meta name="apple-mobile-web-app-title" content="English Leap for Students" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content={themeColor} />
@@ -41,6 +43,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         {/* Add actual icon links here if you have them */}
         {/* <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" /> */}
+        {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
       </head>
       <body 
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -49,6 +52,7 @@ export default function RootLayout({
         <AppLayout>
           {children}
         </AppLayout>
+        <Toaster />
       </body>
     </html>
   );
