@@ -1,16 +1,16 @@
 
-'use client'; // Add this directive
+'use client'; 
 
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button"; // Assuming this is correctly set up
+import { Button } from "@/components/ui/button";
 import { BookOpenCheck, Volume2 } from "lucide-react";
 
 interface VocabularyItem {
   word: string;
   imageSrc: string;
-  imageHint: string; // For AI image generation hint
-  translation_id?: string; // Optional Indonesian translation
+  imageHint: string; 
+  translation_id?: string; 
 }
 
 const vocabularyList: VocabularyItem[] = [
@@ -24,16 +24,7 @@ const vocabularyList: VocabularyItem[] = [
 
 export default function VocabularyPage() {
   const handlePronunciation = (word: string) => {
-    // Placeholder for actual speech synthesis
-    alert(`Pronouncing: ${word}`);
-    // Later, we can integrate:
-    // if (typeof window !== 'undefined' && window.speechSynthesis) {
-    //   const utterance = new SpeechSynthesisUtterance(word);
-    //   utterance.lang = 'en-US'; // Set language for pronunciation
-    //   window.speechSynthesis.speak(utterance);
-    // } else {
-    //   alert('Speech synthesis not supported in this browser.');
-    // }
+    alert(`Pronouncing: ${word} (Audio feature coming soon!)`);
   };
 
   return (
@@ -56,7 +47,7 @@ export default function VocabularyPage() {
         <CardContent className="p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {vocabularyList.map((item) => (
-              <Card key={item.word} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+              <Card key={item.word} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col bg-background/70">
                 <div className="relative w-full h-48">
                   <Image
                     src={item.imageSrc}
@@ -75,10 +66,10 @@ export default function VocabularyPage() {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="w-full group"
+                      className="w-full group border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                       onClick={() => handlePronunciation(item.word)}
                     >
-                      <Volume2 className="h-5 w-5 mr-2 text-accent group-hover:text-accent-foreground transition-colors" />
+                      <Volume2 className="h-5 w-5 mr-2 transition-colors" />
                       Hear Pronunciation
                     </Button>
                   </div>

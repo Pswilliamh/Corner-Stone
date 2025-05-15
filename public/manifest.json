@@ -2,23 +2,23 @@
 {
   "name": "English Leap for Students",
   "short_name": "EnglishLeap",
-  "description": "Learn English with fun and interactive lessons!",
+  "description": "Fun English learning app for students in Indonesia.",
   "icons": [
     {
-      "src": "/icons/englishleap-192x192.png",
+      "src": "/icons/english-leap/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/englishleap-512x512.png",
+      "src": "/icons/english-leap/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "#87CEEB",
-  "background_color": "#FFFFFF",
+  "theme_color": "#FFD700",
+  "background_color": "#ADD8E6",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

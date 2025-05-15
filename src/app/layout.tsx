@@ -16,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Corner Stone',
-  description: 'Identify rocks, describe items, and explore their biblical significance.',
-  manifest: '/manifest-cornerstone.json', // Using a distinct manifest
+  title: 'English Leap for Students',
+  description: 'Fun English learning for students in Indonesia!',
+  manifest: '/manifest.json',
 };
 
-const themeColor = "#D4AF37"; // Gold, approximating --primary
+const themeColor = "#FFD700"; // Bright Yellow, approximating --primary
 
 export default function RootLayout({
   children,
@@ -31,20 +31,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        <meta name="application-name" content="Corner Stone" />
+        <meta name="application-name" content="English Leap" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Corner Stone" />
+        <meta name="apple-mobile-web-app-title" content="English Leap" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content={themeColor} />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="theme-color" content={themeColor} />
-        <link rel="manifest" href="/manifest-cornerstone.json" />
+        <link rel="manifest" href="/manifest.json" />
         {/* 
-          Placeholder for actual icons. Create these in public/icons/cornerstone/
-          <link rel="apple-touch-icon" href="/icons/cornerstone/apple-touch-icon.png" /> 
-          <link rel="shortcut icon" href="/icons/cornerstone/favicon.ico" /> 
+          Placeholder for actual icons. Create these in public/icons/english-leap/
+          <link rel="apple-touch-icon" href="/icons/english-leap/apple-touch-icon.png" /> 
+          <link rel="shortcut icon" href="/icons/english-leap/favicon.ico" /> 
         */}
       </head>
       <body 

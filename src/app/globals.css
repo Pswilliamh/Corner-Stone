@@ -9,59 +9,59 @@ body {
 
 @layer base {
   :root {
-    /* Navy Blue, White, Gold Theme for Corner Stone */
-    --background: 220 30% 15%; /* Dark Navy Blue */
-    --foreground: 0 0% 98%; /* Almost White */
+    /* Child-friendly Theme: Bright Blue, Yellow, Green */
+    --background: 210 60% 97%; /* Light Sky Blue */
+    --foreground: 210 30% 25%; /* Dark Slate Blue */
 
-    --card: 220 30% 20%; /* Slightly Lighter Navy */
-    --card-foreground: 0 0% 98%; /* Almost White */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 30% 25%; /* Dark Slate Blue */
 
-    --popover: 220 30% 12%; /* Darker Navy for Popovers */
-    --popover-foreground: 0 0% 98%; /* Almost White */
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 30% 25%; /* Dark Slate Blue */
 
-    --primary: 45 80% 60%; /* Gold */
-    --primary-foreground: 220 30% 10%; /* Very Dark Navy for text on Gold */
+    --primary: 45 90% 55%; /* Bright Yellow */
+    --primary-foreground: 210 30% 15%; /* Darker Slate Blue for text on Yellow */
 
-    --secondary: 210 30% 35%; /* Muted Blue/Grey */
-    --secondary-foreground: 0 0% 98%; /* Almost White */
+    --secondary: 130 60% 65%; /* Soft Green */
+    --secondary-foreground: 0 0% 100%; /* White */
 
-    --muted: 220 20% 30%; /* Medium Dark Cool Gray */
-    --muted-foreground: 210 30% 70%; /* Lighter Grayish Blue */
+    --muted: 210 40% 90%; /* Light Greyish Blue */
+    --muted-foreground: 210 30% 45%; /* Medium Slate Blue */
     
-    --accent: 45 70% 50%; /* Slightly Darker Gold / Ochre */
+    --accent: 25 85% 60%; /* Bright Orange */
     --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 60% 50%; /* Soft Red */
+    --destructive: 0 70% 60%; /* Cheerful Red */
     --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 220 20% 40%; /* Medium Cool Gray Border */
-    --input: 220 20% 25%; /* Darker Cool Gray Input */
-    --ring: 45 80% 60%; /* Gold for focus rings */
+    --border: 210 40% 80%; /* Medium Light Blue Border */
+    --input: 210 50% 92%; /* Very Light Blue Input */
+    --ring: 45 90% 55%; /* Bright Yellow for focus rings */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Keeping dark theme consistent with the primary theme for now */
-    --background: 220 30% 15%;
-    --foreground: 0 0% 98%;
-    --card: 220 30% 20%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 30% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 45 80% 60%;
-    --primary-foreground: 220 30% 10%;
-    --secondary: 210 30% 35%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 220 20% 30%;
+    /* For now, dark theme can mirror the light theme or be adjusted later */
+    --background: 210 30% 15%; 
+    --foreground: 210 60% 97%; 
+    --card: 210 30% 20%; 
+    --card-foreground: 210 60% 97%;
+    --popover: 210 30% 12%; 
+    --popover-foreground: 210 60% 97%;
+    --primary: 45 90% 55%; 
+    --primary-foreground: 210 30% 15%;
+    --secondary: 130 60% 55%; 
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 20% 30%; 
     --muted-foreground: 210 30% 70%;
-    --accent: 45 70% 50%;
+    --accent: 25 85% 60%; 
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 60% 50%;
+    --destructive: 0 70% 60%; 
     --destructive-foreground: 0 0% 100%;
-    --border: 220 20% 40%;
-    --input: 220 20% 25%;
-    --ring: 45 80% 60%;
+    --border: 210 20% 40%; 
+    --input: 210 20% 25%; 
+    --ring: 45 90% 55%;
   }
 }
 

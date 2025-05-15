@@ -1,15 +1,16 @@
 
-# Corner Stone App
+# English Leap for Students
 
-This is a Next.js application designed to integrate geological exploration with spiritual insights. Users can identify rocks, describe items, explore their biblical significance, and manage a personal collection.
+An interactive and fun application designed to help students in Indonesia learn English, from letters and vocabulary to sentences and pronunciation.
 
 ## Features
 
--   **Rock Identification:** Upload a photo of a rock to get AI-powered identification and details.
--   **Describe Item:** Upload a photo of any item to get an AI-generated description and potential significance.
--   **My Collection:** Save identified rocks and items with personal notes.
--   **Bible Bot:** Explore scriptures and ask questions about biblical topics, especially related to stones and elements.
--   **Daily Scripture:** View an inspirational Bible verse each day.
+-   **Alphabet Learning:** Interactive lessons for each letter.
+-   **Vocabulary Builder:** Learn new English words with pictures and sounds.
+-   **Sentence Practice:** Understand how to form basic English sentences.
+-   **Pronunciation Guide:** Listen and practice speaking clearly.
+-   (Future) Indonesian to English translation aids.
+-   (Future) AI-powered item description for vocabulary building.
 
 ## Tech Stack
 
@@ -18,26 +19,17 @@ This is a Next.js application designed to integrate geological exploration with 
 -   TypeScript
 -   Tailwind CSS
 -   ShadCN UI components
--   Genkit (for AI features - rock identification, item description)
--   Firebase (potential for future database/auth integration)
 
 ## Getting Started
-
-To get started with development:
 
 1.  Install dependencies:
     ```bash
     npm install
     ```
-2.  Set up your environment variables. Create a `.env.local` file in the root of your project and add your Google AI API Key:
-    ```env
-    GOOGLE_API_KEY=YOUR_GOOGLE_AI_API_KEY
-    ```
-3.  Run the development server:
+2.  Run the development server:
     ```bash
     npm run dev
     ```
-    The app will be available at `http://localhost:9003` by default.
+    The app will be available at `http://localhost:9004` by default (check your terminal for the exact port).
 
-Ensure you have the necessary ShadCN UI components installed.
-```
+This project aims to provide an engaging and effective learning experience.
