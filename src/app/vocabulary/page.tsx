@@ -1,7 +1,9 @@
 
+'use client'; // Add this directive
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; // Assuming this is correctly set up
 import { BookOpenCheck, Volume2 } from "lucide-react";
 
 interface VocabularyItem {
@@ -24,6 +26,14 @@ export default function VocabularyPage() {
   const handlePronunciation = (word: string) => {
     // Placeholder for actual speech synthesis
     alert(`Pronouncing: ${word}`);
+    // Later, we can integrate:
+    // if (typeof window !== 'undefined' && window.speechSynthesis) {
+    //   const utterance = new SpeechSynthesisUtterance(word);
+    //   utterance.lang = 'en-US'; // Set language for pronunciation
+    //   window.speechSynthesis.speak(utterance);
+    // } else {
+    //   alert('Speech synthesis not supported in this browser.');
+    // }
   };
 
   return (
