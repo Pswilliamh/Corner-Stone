@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -23,7 +24,8 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogDescription,
-  DialogClose
+  DialogClose,
+  DialogFooter
 } from "@/components/ui/dialog";
 import RockIdentificationDisplay from './rock-identification-display';
 import { ScrollArea } from '@/components/ui/scroll-area';
