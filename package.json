@@ -30,7 +30,9 @@
     "tailwindcss-animate": "^1.0.7",
     "@genkit-ai/googleai": "^1.0.0",
     "genkit": "^1.0.0",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@opentelemetry/exporter-jaeger": "^1.0.0",
+    "@opentelemetry/exporter-zipkin": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
