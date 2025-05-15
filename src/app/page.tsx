@@ -1,107 +1,52 @@
-
 'use client';
 
-import { useState } from 'react';
-import type { IdentifyRockOutput } from '@/ai/flows/identify-rock';
-import { identifyRock } from '@/ai/flows/identify-rock';
-import PhotoUploader from '@/components/rock-hound/photo-uploader';
-import RockIdentificationDisplay from '@/components/rock-hound/rock-identification-display';
-import SaveRockForm from '@/components/rock-hound/save-rock-form';
-import { saveRockToStorage } from '@/lib/local-storage-service';
-import type { SavedRock } from '@/lib/rock-hound-types';
-import { useToast } from "@/hooks/use-toast";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertTriangle, Loader2 } from "lucide-react";
-import DailyScripture from '@/components/custom/daily-scripture'; // Added import
+import Link from 'next/link';
+import { GraduationCap, BookOpenCheck, MessageSquare, Mic2, ChevronRight } from 'lucide-react';
 
 export default function HomePage() {
-  const [uploadedImage, setUploadedImage] = useState<{ file: File; dataUri: string } | null>(null);
-  const [rockData, setRockData] = useState<IdentifyRockOutput | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const { toast } = useToast();
-
-  const handlePhotoUploaded = async (file: File, dataUri: string) => {
-    setUploadedImage({ file, dataUri });
-    setRockData(null); // Clear previous results
-    setError(null);
-    setIsLoading(true);
-
-    try {
-      const result = await identifyRock({ photoDataUri: dataUri });
-      setRockData(result);
-    } catch (err) {
-      console.error('Error identifying rock:', err);
-      let errorMessage = 'Failed to identify rock. Please try again.';
-      if (err instanceof Error) {
-        errorMessage = err.message;
-      }
-      setError(errorMessage);
-      toast({
-        title: "Identification Error",
-        description: errorMessage,
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleRockSaved = (note: string) => {
-    if (!rockData || !uploadedImage) return;
-
-    const newSavedRock: SavedRock = {
-      id: Date.now().toString(), // Simple ID generation
-      imageDataUri: uploadedImage.dataUri,
-      identification: rockData,
-      userNote: note,
-      timestamp: Date.now(),
-    };
-
-    saveRockToStorage(newSavedRock);
-    toast({
-      title: "Rock Saved!",
-      description: `${rockData.identification.commonName} has been added to your collection.`,
-    });
-    // Optionally clear the form or redirect
-    setRockData(null);
-    setUploadedImage(null);
-  };
+  const features = [
+    { name: 'Learn Alphabet', description: 'Master the English letters from A to Z.', href: '/alphabet', icon: GraduationCap },
+    { name: 'Build Vocabulary', description: 'Discover new words with pictures and sounds.', href: '/vocabulary', icon: BookOpenCheck },
+    { name: 'Practice Sentences', description: 'Understand how to form basic sentences.', href: '/sentences', icon: MessageSquare },
+    { name: 'Improve Pronunciation', description: 'Listen and practice speaking clearly.', href: '/pronunciation', icon: Mic2 },
+  ];
 
   return (
-    <div className="space-y-12 flex flex-col items-center">
-      <DailyScripture /> {/* Added DailyScripture component */}
+    <div className="space-y-12 flex flex-col items-center text-center">
+      <div className="mt-8">
+        <h1 className="text-4xl sm:text-5xl font-bold text-primary">
+          Welcome to English Leap for Kids!
+        </h1>
+        <p className="mt-4 text-lg sm:text-xl text-foreground/80 max-w-2xl mx-auto">
+          Your fun and interactive journey to learning English starts here. Explore letters, words, sentences, and practice pronunciation with engaging lessons.
+        </p>
+      </div>
 
-      {!rockData && !isLoading && !uploadedImage &&  ( // Condition to hide uploader if rockData exists or is loading
-        <PhotoUploader onPhotoUploaded={handlePhotoUploaded} isProcessing={isLoading} />
-      )}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 w-full max-w-4xl">
+        {features.map((feature) => (
+          <Link href={feature.href} key={feature.name} legacyBehavior>
+            <a className="group bg-card p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center ring-1 ring-border hover:ring-accent">
+              <div className="bg-accent/20 p-4 rounded-full mb-4 group-hover:bg-accent/30 transition-colors">
+                <feature.icon className="h-10 w-10 text-accent group-hover:scale-110 transition-transform" />
+              </div>
+              <h2 className="text-2xl font-semibold text-primary mb-2 group-hover:text-accent transition-colors">{feature.name}</h2>
+              <p className="text-foreground/70 mb-4 flex-grow">{feature.description}</p>
+              <div className="mt-auto text-sm font-medium text-accent group-hover:underline flex items-center">
+                Start Learning <ChevronRight className="ml-1 h-4 w-4" />
+              </div>
+            </a>
+          </Link>
+        ))}
+      </div>
 
-      {isLoading && (
-        <div className="flex flex-col items-center justify-center space-y-4 p-8 rounded-lg bg-card shadow-md min-h-[300px]">
-          <Loader2 className="h-12 w-12 animate-spin text-primary" />
-          <p className="text-lg text-muted-foreground">Identifying your rock, please wait...</p>
-          <p className="text-sm text-muted-foreground">This may take a moment.</p>
-        </div>
-      )}
-
-      {error && !isLoading && (
-        <Alert variant="destructive" className="max-w-lg mx-auto">
-          <AlertTriangle className="h-4 w-4" />
-          <AlertTitle>Error</AlertTitle>
-          <AlertDescription>{error}</AlertDescription>
-        </Alert>
-      )}
-
-      {rockData && !isLoading && (
-        <div className="w-full max-w-3xl mx-auto space-y-8">
-          <RockIdentificationDisplay rockData={rockData} />
-          <SaveRockForm
-            rockData={rockData}
-            imageDataUri={uploadedImage!.dataUri}
-            onRockSaved={handleRockSaved}
-          />
-        </div>
-      )}
+      <div className="mt-12 p-6 bg-secondary/20 rounded-lg max-w-3xl w-full shadow-md">
+        <h3 className="text-2xl font-semibold text-secondary-foreground mb-3">Teacher's Note</h3>
+        <p className="text-secondary-foreground/80">
+          This app is designed to make learning English intuitive and enjoyable for young learners in Indonesia. 
+          We'll explore translation from Bahasa Indonesia to English and use audio to help with understanding and speaking.
+          Let's embark on this exciting learning adventure together!
+        </p>
+      </div>
     </div>
   );
 }

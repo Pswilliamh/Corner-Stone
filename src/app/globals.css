@@ -8,99 +8,66 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
-    --foreground: 210 60% 17%; /* Dark Navy */
+    --background: 200 50% 96%; /* Very Light Sky Blue */
+    --foreground: 220 25% 25%; /* Dark Cool Gray */
 
-    --card: 0 0% 97%; /* Light Grayish White */
-    --card-foreground: 210 60% 17%; /* Dark Navy */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 25% 25%; /* Dark Cool Gray */
 
     --popover: 0 0% 100%; /* White */
-    --popover-foreground: 210 60% 17%; /* Dark Navy */
+    --popover-foreground: 220 25% 25%; /* Dark Cool Gray */
 
-    --primary: 210 55% 40%; /* Navy Blue */
-    --primary-foreground: 0 0% 98%; /* Off-White */
+    --primary: 205 70% 50%; /* Bright Sky Blue */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 50% 60%; /* Lighter Navy Blue */
-    --secondary-foreground: 0 0% 98%; /* Off-White */
+    --secondary: 160 60% 65%; /* Soft Teal */
+    --secondary-foreground: 220 25% 15%; /* Darker Cool Gray */
 
-    --muted: 210 40% 90%; /* Very Light Navy Blue */
-    --muted-foreground: 210 30% 50%; /* Desaturated Navy */
+    --muted: 210 30% 90%; /* Light Grayish Blue */
+    --muted-foreground: 210 20% 50%; /* Medium Grayish Blue */
 
-    --accent: 45 85% 55%; /* Gold */
-    --accent-foreground: 210 60% 17%; /* Dark Navy for text on Gold */
+    --accent: 45 100% 55%; /* Sunny Yellow */
+    --accent-foreground: 220 25% 15%; /* Darker Cool Gray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 55%; /* Soft Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 210 30% 80%; /* Light Navy Border */
-    --input: 210 30% 94%; /* Very Light Navy for input background */
-    --ring: 45 85% 55%; /* Gold for focus rings */
+    --border: 200 30% 85%; /* Light Blue Border */
+    --input: 200 30% 92%; /* Very Light Blue Input */
+    --ring: 205 70% 50%; /* Bright Sky Blue for focus rings */
 
     --radius: 0.5rem;
-
-    /* Chart colors - can be adjusted if charts are used */
-    --chart-1: 210 76% 61%;
-    --chart-2: 45 80% 50%;
-    --chart-3: 200 37% 24%;
-    --chart-4: 40 74% 66%;
-    --chart-5: 20 87% 67%;
-
-    /* Sidebar colors */
-    --sidebar-background: 210 40% 94%; /* Very Light Navy */
-    --sidebar-foreground: 210 60% 17%; /* Dark Navy */
-    --sidebar-primary: 210 55% 40%; /* Navy Blue */
-    --sidebar-primary-foreground: 0 0% 98%; /* Off-White */
-    --sidebar-accent: 45 85% 55%; /* Gold */
-    --sidebar-accent-foreground: 210 60% 17%; /* Dark Navy */
-    --sidebar-border: 210 30% 80%;
-    --sidebar-ring: 45 85% 55%;
   }
 
   .dark {
-    --background: 210 60% 17%; /* Dark Navy */
-    --foreground: 0 0% 98%; /* Off-White */
+    /* Define dark mode colors if needed later, for now matching light for simplicity */
+    --background: 220 25% 15%; /* Dark Cool Gray */
+    --foreground: 200 50% 96%; /* Very Light Sky Blue */
 
-    --card: 210 55% 22%; /* Slightly Lighter Dark Navy */
-    --card-foreground: 0 0% 98%; /* Off-White */
+    --card: 220 25% 20%; /* Slightly Lighter Dark Cool Gray */
+    --card-foreground: 200 50% 96%; /* Very Light Sky Blue */
 
-    --popover: 210 60% 17%; /* Dark Navy */
-    --popover-foreground: 0 0% 98%; /* Off-White */
+    --popover: 220 25% 15%; /* Dark Cool Gray */
+    --popover-foreground: 200 50% 96%; /* Very Light Sky Blue */
 
-    --primary: 45 85% 60%; /* Gold */
-    --primary-foreground: 210 60% 12%; /* Very Dark Navy for text on Gold */
+    --primary: 45 100% 55%; /* Sunny Yellow (Primary for dark) */
+    --primary-foreground: 220 25% 10%; /* Very Dark Cool Gray */
 
-    --secondary: 210 50% 45%; /* Medium Navy Blue */
-    --secondary-foreground: 0 0% 98%; /* Off-White */
+    --secondary: 160 50% 45%; /* Muted Teal */
+    --secondary-foreground: 200 50% 96%; /* Very Light Sky Blue */
 
-    --muted: 210 50% 30%; /* Dark Muted Navy */
-    --muted-foreground: 210 25% 70%; /* Light Grayish Navy */
+    --muted: 220 20% 30%; /* Medium Dark Cool Gray */
+    --muted-foreground: 210 30% 70%; /* Lighter Grayish Blue */
 
-    --accent: 45 80% 70%; /* Brighter Gold */
-    --accent-foreground: 210 60% 12%; /* Very Dark Navy */
+    --accent: 205 70% 60%; /* Brighter Sky Blue (Accent for dark) */
+    --accent-foreground: 220 25% 10%; /* Very Dark Cool Gray */
 
-    --destructive: 0 72.2% 50.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 40% 35%; /* Medium Navy Border */
-    --input: 210 40% 25%; /* Dark Navy for input background */
-    --ring: 45 85% 60%; /* Gold for focus rings */
-
-    /* Chart colors for dark mode */
-    --chart-1: 210 70% 50%;
-    --chart-2: 45 70% 55%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 200 65% 60%;
-    --chart-5: 340 75% 55%;
-
-    /* Sidebar colors for dark mode */
-    --sidebar-background: 210 60% 12%; /* Very Dark Navy */
-    --sidebar-foreground: 0 0% 90%; /* Off-White */
-    --sidebar-primary: 45 85% 60%; /* Gold */
-    --sidebar-primary-foreground: 210 60% 12%;
-    --sidebar-accent: 210 50% 45%; /* Medium Navy */
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 40% 30%;
-    --sidebar-ring: 45 85% 60%;
+    --border: 220 20% 40%; /* Medium Cool Gray Border */
+    --input: 220 20% 25%; /* Darker Cool Gray Input */
+    --ring: 45 100% 55%; /* Sunny Yellow for focus rings */
   }
 }
 

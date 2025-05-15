@@ -1,25 +1,24 @@
 {
-  "name": "Corner Stone",
-  "short_name": "CornerStone",
-  "description": "Kingdom Of Heaven Embassy Inc. - Corner Stone",
+  "name": "English Leap for Kids",
+  "short_name": "EnglishLeap",
+  "description": "Learn English with fun and interactive lessons!",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "https://placehold.co/192x192.png?text=EL&font=sans-serif",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "https://placehold.co/512x512.png?text=EL&font=sans-serif",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
+  "theme_color": "#85D3FF",
+  "background_color": "#EFF9FF",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#2A4B7C",
-  "scope": "/",
-  "orientation": "portrait-primary"
+  "orientation": "portrait"
 }
