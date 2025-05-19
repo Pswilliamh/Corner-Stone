@@ -1,47 +1,41 @@
 
-'use client'; 
-
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; // Button import is fine, but we won't use interactive props
 import { BookOpenCheck, Volume2 } from "lucide-react";
+
+// This page is a remnant from the "English Leap" app setup.
+// It's being modified to be a minimal server component to prevent build errors
+// in the "Corner Stone" application.
 
 interface VocabularyItem {
   word: string;
   imageSrc: string;
-  imageHint: string; 
-  translation_id?: string; 
+  imageHint: string;
+  translation_id?: string;
 }
 
 const vocabularyList: VocabularyItem[] = [
-  { word: "Apple", imageSrc: "https://placehold.co/300x200.png", imageHint: "red apple", translation_id: "Apel" },
-  { word: "Book", imageSrc: "https://placehold.co/300x200.png", imageHint: "open book", translation_id: "Buku" },
-  { word: "Cat", imageSrc: "https://placehold.co/300x200.png", imageHint: "cute cat", translation_id: "Kucing" },
-  { word: "Sun", imageSrc: "https://placehold.co/300x200.png", imageHint: "bright sun", translation_id: "Matahari" },
-  { word: "House", imageSrc: "https://placehold.co/300x200.png", imageHint: "small house", translation_id: "Rumah" },
-  { word: "Ball", imageSrc: "https://placehold.co/300x200.png", imageHint: "colorful ball", translation_id: "Bola" },
+  { word: "Placeholder Word 1", imageSrc: "https://placehold.co/300x200.png", imageHint: "item one", translation_id: "Terjemahan 1" },
+  { word: "Placeholder Word 2", imageSrc: "https://placehold.co/300x200.png", imageHint: "item two", translation_id: "Terjemahan 2" },
 ];
 
 export default function VocabularyPage() {
-  const handlePronunciation = (word: string) => {
-    alert(`Pronouncing: ${word} (Audio feature coming soon!)`);
-  };
-
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-primary mb-2">Build Vocabulary</h1>
-        <p className="text-lg text-muted-foreground">Discover new English words with pictures and sounds.</p>
+        <h1 className="text-4xl font-bold text-primary mb-2">Vocabulary Builder (Placeholder)</h1>
+        <p className="text-lg text-muted-foreground">This page is a placeholder.</p>
       </div>
 
       <Card className="w-full max-w-5xl mx-auto shadow-lg">
         <CardHeader>
           <CardTitle className="flex items-center gap-3 text-2xl font-semibold">
             <BookOpenCheck className="h-7 w-7 text-accent" />
-            Word Explorer
+            Word Explorer (Placeholder)
           </CardTitle>
           <CardDescription>
-            Learn these words. Click the speaker icon to hear how they sound (feature coming soon!).
+            Content for this section is part of a different application.
           </CardDescription>
         </CardHeader>
         <CardContent className="p-6">
@@ -62,21 +56,12 @@ export default function VocabularyPage() {
                   {item.translation_id && (
                     <p className="text-sm text-muted-foreground mb-3">Bahasa Indonesia: {item.translation_id}</p>
                   )}
-                  <div className="mt-auto">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="w-full group border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-                      onClick={() => handlePronunciation(item.word)}
-                    >
-                      <Volume2 className="h-5 w-5 mr-2 transition-colors" />
-                      Hear Pronunciation
-                    </Button>
-                  </div>
+                   {/* The interactive button that caused issues is removed */}
                 </CardContent>
               </Card>
             ))}
           </div>
+           <p className="text-center mt-6 text-muted-foreground">This is a placeholder page for the Corner Stone application.</p>
         </CardContent>
       </Card>
     </div>
